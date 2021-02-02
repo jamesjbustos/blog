@@ -26,7 +26,7 @@ module.exports = {
         ],
         externalLinks: [
           {
-            name: `Email`,
+            name: `Contact`,
             url: `mailto:jamesbustos3@hotmail.com`,
           },
           {
