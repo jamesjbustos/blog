@@ -6,8 +6,78 @@ tags:
   - Tutorial
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam quis enim lobortis scelerisque fermentum dui faucibus. Ultricies tristique nulla aliquet enim. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi etiam. Ipsum nunc aliquet bibendum enim facilisis gravida neque. Tortor condimentum lacinia quis vel eros donec ac odio. Mauris ultrices eros in cursus. Dignissim convallis aenean et tortor at risus. Odio aenean sed adipiscing diam donec adipiscing tristique risus. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Ipsum dolor sit amet consectetur adipiscing. Id neque aliquam vestibulum morbi blandit cursus risus. Mauris in aliquam sem fringilla. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Id interdum velit laoreet id donec ultrices tincidunt arcu. Commodo viverra maecenas accumsan lacus vel facilisis. Suspendisse in est ante in nibh mauris cursus mattis molestie. Gravida rutrum quisque non tellus orci ac. Ornare quam viverra orci sagittis.
+Hey world! Wanted to create a post briefly explaining how I used Gatsby to create this site and Netlify to deploy it. Though you can easily get started with Gatsby’s documentation [here](https://www.gatsbyjs.com/docs/), I felt summarizing the primary steps would be helpful. The contents of this tutorial applies to Mac users.
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Urna id volutpat lacus laoreet. Amet est placerat in egestas erat imperdiet. 
+### Gatsby
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam quis enim lobortis scelerisque fermentum dui faucibus. Ultricies tristique nulla aliquet enim. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi etiam. Ipsum nunc aliquet bibendum enim facilisis gravida neque. Tortor condimentum lacinia quis vel eros donec ac odio. Mauris ultrices eros in cursus. Dignissim convallis aenean et tortor at risus. Odio aenean sed adipiscing diam donec adipiscing tristique risus. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Ipsum dolor sit amet consectetur adipiscing. Id neque aliquam vestibulum morbi blandit cursus risus. Mauris in aliquam sem fringilla. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Id interdum velit laoreet id donec ultrices tincidunt arcu. Commodo viverra maecenas accumsan lacus vel facilisis. Suspendisse in est ante in nibh mauris cursus mattis molestie. Gravida rutrum quisque non tellus orci ac. Ornare quam viverra orci sagittis.
+Gatsby is a free and open source framework based on react that can be used to build great static sites and web apps. To get started, there are various  dependencies that must be installed. However, first ensure you have Homebrew installed, as it will accelerate this process. To install Homebrew visit their [homepage](https://brew.sh) and there you will find the script you need to run on your terminal.
+
+Install Xcode command line tools:
+
+```noLineNumbers
+xcode-select --install
+```
+
+Install Node using Homebrew:
+
+```noLineNumbers
+brew install node
+```
+
+Install git:
+
+```noLineNumbers
+brew install git
+```
+
+Install Gatsby CLI package:
+
+```noLineNumbers
+npm install -g gatsby-cli
+```
+Gatsby's CLI will allow us to quickly create Gatsby powered sites and access the various commands used for developing Gatsby sites
+
+With your environment ready now, you can start creating a Gatsby site. If you are looking for a quick way to get your site up and running, you can utilize “Starter sites." Which is simply partially built sites with default configuration. Fortunately, there is a library full of starter sites that look great and will ultimately shorten the development process. For this example, we will use Gatsby’s stater blog site. 
+
+Which can be created using the following command:
+
+```noLineNumbers
+gatsby new my-gatsby-project https://github.com/gatsbyjs/gatsby-starter-blog
+```
+
+If not installed already, you will need a text editor to open your project. Visual studio code works great, you can download it [here](https://code.visualstudio.com/download). With VS Code now installed, we can open the project and run a development server!
+
+To run a development server, open your terminal and ensure it's pointed to the project's path. Here you will want to run the command:
+
+Run local development server:
+```noLineNumbers
+gatsby develop
+```
+
+This will create a local development environment, where you can view changes to your website in real time. A local port will be created, which you can acesss through any browser installed.
+
+All that is left is to alter any frontend code to your liking. Obviously though there are much more things you can do with Gatsby’s framework, which you can research in their documentation. However, the starter site should now be ready for modification. 
+
+### Netlify
+
+Netlify is an open source CMS that will allow us to host our Gatsby website for free.
+
+To setup netlify you will need to visit their [website](https://www.netlify.com), create an account, and simply drag and drop your website project file.
+
+However, I found simply creating a repository for your project on GitHub and connecting it to Netlify is a far better option. This way any changes to your site will update accordingly on Netlify’s end and you have various versions of your site, which you can alway revert back to.
+
+Netlify also allows you to manage your domain, which you can easily connect using Netlify’s DNS servers. Netlify makes the process very intuitive, however, I did run into one simple issue. With a git respisotry, make sure you specify in your sites setting the build command and publish directory. Which you can find under the menu section, “Build & deploy.”
+
+For build command you will input:
+
+```noLineNumbers
+gatsby build
+```
+
+For publish directory the default is:
+
+```noLineNumbers
+public
+```
+
+With all this completed your Gatsby site should be live now! Use this oppurtunity to make great content and continue experimenting! 💡
