@@ -27,7 +27,7 @@ module.exports = {
         externalLinks: [
           {
             name: `Contact`,
-            url: `mailto:jamesbustos3@hotmail.com`,
+            url: `mailto:jamesjbustosblog@gmail.com`,
           },
           {
             name: `Instagram`,
