@@ -8,6 +8,11 @@ module.exports = {
   siteMetadata: {
     siteTitleAlt: `JamesJBustos`,
     siteTitle: 'James',
+    description: "Blog",
+    url: "https://jamesjbustos.com",
+    image: "/banner.jpg",
+    twitterUsername: "@jamesjbustos",
+    author: "James B",
   },
   plugins: [
     {
